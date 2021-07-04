@@ -13,25 +13,14 @@ numOfGuesses = 0
 while choosenNumber != guessedNumber:
         numOfGuesses = numOfGuesses + 1
         print('Take a guess.')
-        guessedNumber = input()
+        guessedNumber = int(input())
         if guessedNumber < choosenNumber:
                 print('Your guess is too low.')
                 continue
         elif guessedNumber > choosenNumber:
                 print('Your guess is too high.')
                 continue
-print('Good job! You guessed my number in ' + numOfGuesses + ' guesses!')
+print('Good job! You guessed my number in ' + str(numOfGuesses) + ' guesses!')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Pozoren sem, da je data type funkcije input() string.
+# Pozoren sem na string concatenation pri funkciji print().
