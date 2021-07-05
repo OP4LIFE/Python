@@ -32,7 +32,7 @@ while choosenMove != 'q':
 	'''
 	r r	(tie)	p r (win)	s r (lose)
 	r p	(lose)	p p (tie)	s p (win)
-	r s (win)	p s (lose)	s s (tie)
+	r s 	(win)	p s (lose)	s s (tie)
 	'''
 	cM = choosenMove
 	oM = oppositeMove
