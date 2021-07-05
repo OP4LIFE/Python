@@ -5,7 +5,7 @@ losses = 0
 ties = 0
 choosenMove = ''
 while choosenMove != 'q':
-	print(str(wins) + ' wins, ' + str(losses) + ' losses, ' + str(ties) + ' ties')
+	print('{} wins, {} losses, {} ties'.format(wins, losses, ties))
 	print('Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit.')
 	# Player choosing
 	choosenMove = input()
