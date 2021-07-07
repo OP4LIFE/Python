@@ -1,19 +1,18 @@
 # Settings
 symbol_1 = ' '
 symbol_2 = '*'
-start = 0
-width = 5
-limit = 5
+width = 15
+start = 10
+end = 15
 step = 1
 
-multiply = 0
-code = symbol_1*multiply + symbol_2*width
-def right():
-	for multiply in range(start, limit - 1, step):
-		print(code)
-def left():
-	for multiply in range(limit - 1, start, -step):
-		print(code)
+import time
+
+end = end - 1
+def image(start, end, step):
+    for factor in range(start, end, step):
+        print(symbol_1*factor + symbol_2*width)
+        time.sleep(.1)
 while 1:
-	right()
-	left()
+	image(start, end, step)
+	image(end, start, -step)
