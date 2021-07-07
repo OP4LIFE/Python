@@ -16,3 +16,5 @@ def image(start, end, step):
 while 1:
 	image(start, end, step)
 	image(end, start, -step)
+
+# It would be interesting to set the step variable to less than one, say .1, but that is not possible with range() function. We'll see what lists bring us in the next chapter. :D
