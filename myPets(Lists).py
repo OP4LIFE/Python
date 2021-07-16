@@ -1,10 +1,10 @@
 # A list of pets.
 pets = ['Blacky', 'Bobby']
-pet = 1
 
 # Ask for a guess.
 print('Press enter to quit.')
 print('Guess what\'s the name of my pet.')
+pet = 1
 while pet != '':  
     pet = input()
     # Check the guess.
