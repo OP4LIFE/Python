@@ -8,7 +8,7 @@ pet = 1
 while pet != '':  
     pet = input()
     
-    # Check the guess.
+# Check the guess.
     if pet in pets:
         print('You guessed!')
         break
