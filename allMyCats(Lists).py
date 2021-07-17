@@ -8,5 +8,5 @@ while name != '':
     
 # Print all names. 
 print('The cat names are:')
-for index in names:
-    print(index)
+for name in names:
+    print(name)
