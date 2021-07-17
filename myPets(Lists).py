@@ -4,11 +4,11 @@ pets = ['Blacky', 'Bobby']
 print('Press enter to quit.')
 print('Guess what\'s the name of my pet.')
 pet = 1
-while pet != '':  
+while pet:  
     pet = input() 
 # Check the guess.
     if pet in pets:
         print('You guessed!')
         break
-    elif pet != '':
+    elif pet:
         print('Try again!')
