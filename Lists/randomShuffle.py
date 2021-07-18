@@ -8,5 +8,5 @@ def randomShuffle(list):
         value1 = list[index1]
         list[index1] = list[index2]
         list[index2] = value1
-    print(list)
 randomShuffle(bek)
+print(bek)
