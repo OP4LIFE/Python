@@ -20,6 +20,8 @@ def reverse(list1):
         elif i != len(list1) / 2:
             list1[i] = list2[len(list1) - 1 - i]
 
+          
+          
 ''' 
 The upper program can also achieve the results only by
 duplicating the original list and reassigning all values.
@@ -36,6 +38,8 @@ print('Using reverse(): ' + str(li))
 reverse(li)
 reverse2(li)
 print('Using reverse2(): ' + str(li))
+
+
 
 '''
 Misunderstanding accured at line 28, where I thought the statement
