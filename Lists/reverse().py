@@ -43,5 +43,5 @@ print('Using reverse2(): ' + str(li))
 
 '''
 Misunderstanding accured at line 28, where I thought the statement
-created a new object, not just a referetion to the same one.
+created a new object, not just a referation to the same one.
 '''
