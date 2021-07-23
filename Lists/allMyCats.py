@@ -1,7 +1,7 @@
 # Ask for the cat's name.
 names = []
 name = 1
-while name != '':
+while name:
     print('Enter either the name of the ' + str(len(names)+1) + '. cat or nothing to stop.')
     name = input()
     names = names + [name]
