@@ -9,6 +9,6 @@ while pet:
 # Check the guess.
     if pet in pets:
         print('You guessed!')
-        break
+        pet = 0
     elif pet:
         print('Try again!')
