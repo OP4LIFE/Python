@@ -3,6 +3,7 @@ from random import randint
 bek = ['ka', 'op', 'be', 'ri']
 def randomShuffle(list):
     for i in range(len(list)**2):
+        # Switches places of two random items
         index1 = randint(0, len(list) - 1)
         index2 = randint(0, len(list) - 1)
         value1 = list[index1]
