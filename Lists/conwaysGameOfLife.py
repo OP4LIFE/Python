@@ -1,15 +1,15 @@
+# If list's axis are not the same length, the second condition on line 22 will be amiss.
+# Note that the condition on line 38 works only if live states are not labeled with falsey values ('', 0, 0.0).
+
 # Creating a field of squares where each one has its own coorinates and a state. States of the dead squares are represented with zeroes, meanwhile states of the live squares are represented with ones. 
 # Be aware that the state of a field with coordinates (x, y) is obtained from the list with reversed indexes field[y][x].
-# If list's axis are not the same length, the second condition on line 21 will be amiss.
-# Note that the condition on line 38 works only if live states are not labeled with falsey values ('', 0, 0.0).
-field = [ \
-        [0, 0, 0, 0, 0, 0],  # y = 0
-        [0, 0, 1, 0, 0, 0],  # y = 1
-        [0, 0, 0, 1, 0, 0],  # y = 2
-        [0, 1, 1, 1, 0, 0],  # y = 3
-        [0, 0, 0, 0, 0, 0],  # y = 4
-        [0, 0, 0, 0, 0, 0]]  # y = 5  
-#   x =  0  1  2  3  4  5
+field = [[0, 0, 0, 0, 0, 0],  # y = 0
+         [0, 0, 1, 0, 0, 0],  # y = 1
+         [0, 0, 0, 1, 0, 0],  # y = 2
+         [0, 1, 1, 1, 0, 0],  # y = 3
+         [0, 0, 0, 0, 0, 0],  # y = 4
+         [0, 0, 0, 0, 0, 0]]  # y = 5  
+#    x =  0  1  2  3  4  5
 
 # The ensuing for loops allow us to read the fields' states.
 for y in range(len(field)):         # E.g. field[3]
@@ -27,8 +27,7 @@ for y in range(len(field)):         # E.g. field[3]
         right = checkIndexes[1]
         top = checkIndexes[2]
         bottom = checkIndexes[3]
-        allNeighbours = [ \
-                         field[top][left],    field[top][x],    field[top][right],
+        allNeighbours = [field[top][left],    field[top][x],    field[top][right],
                          field[y][left],                        field[y][right],
                          field[bottom][left], field[bottom][x], field[bottom][right]]
 
