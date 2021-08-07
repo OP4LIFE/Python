@@ -12,22 +12,16 @@ for y in range(len(field)):  # E.g. field[0]
     for x in range(len(field[y])):  # E.g. field[0][0], field[0][1],...
         neighboursAlive = 0
         # Dead and live neighbours' coordinates based on the issued square - the missing field[y][x], which is not counted as a neighbour.
-        left = x-1
-        right = x+1
-        top = y-1
-        bottom = y+1
-        # IndexError: list index out of range ,,, and negative indexes
-# if any of them is negative, make it zero.
-        if left < 0 or left > len(field[y])-1:
-            left = 0
-        if right < 0 or right > len(field[y])-1:
-            right = 0
-        if top < 0 or top > len(field)-1:
-            top = 0
-        if bottom < 0 or bottom > len(field)-1:
-            bottom = 0
-# if left < 0:
-#    left = 0
+
+        # If the index is not 1, make it zero. IndexError: list index out of range
+        corners = [x-1, x+1, y-1, y+1]
+        for i in range(len(corners)):
+            if corners[i] < 0 or corners[i] > len(corners)-1: # The second condition works only when x-axis and y-axis are the same lenght.
+                corners[i] = 0
+        left = corners[0]
+        right = corners[1]
+        top = corners[2]
+        bottom = corners[3]
         allNeighbours = [ \
                          field[top][left],    field[top][x],    field[top][right],
                          field[y][left],                        field[y][right],
