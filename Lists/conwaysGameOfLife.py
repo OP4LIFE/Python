@@ -12,7 +12,6 @@ Rules which shape the next generation:
 2. rule: If a dead square has exactly three neighbours, it becomes alive, else it stays dead.
 
 
-
 NOTES FOR MODIFYING THE PROGRAM
 
 Do not change the symbols for live and dead squares as it will interfere with the code.
