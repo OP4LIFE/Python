@@ -16,7 +16,7 @@ Rules which shape the next generation:
 
 NOTES FOR MODIFYING THE PROGRAM
 Do not change the symbols for live and dead squares as it will interfere with the code.
-The field should be a square (x and y-axis are the same length), otherwise the second condition on line 52 isn't correct.
+The field should be a square (x and y-axis are the same length), otherwise the second condition on line 54 isn't correct.
 
 
 
@@ -105,4 +105,3 @@ for i in generations:
         generations += [generations[i] + 1] 
         
    
-
