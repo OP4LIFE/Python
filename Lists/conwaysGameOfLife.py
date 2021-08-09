@@ -1,22 +1,27 @@
 
 
 '''
-
 CONWAYS GAME OF LIFE
 Source: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
-The game is a cellular automaton devised by the British matehmatician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
+The game is a cellular automaton devised by the British matehmatician John Horton Conway in 1970.
+It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
+One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
 
 Rules which shape the next generation:
 1. rule: If a live square has two or three live neighbours, it stays alive, else it dies.
 2. rule: If a dead square has exactly three neighbours, it becomes alive, else it stays dead.
 
 
-NOTES FOR MODIFYING THE PROGRAM
 
+NOTES FOR MODIFYING THE PROGRAM
 Do not change the symbols for live and dead squares as it will interfere with the code.
 The field should be a square (x and y-axis are the same length), otherwise the second condition on line 52 isn't correct.
 
+
+
+THANKS
+Sincere thanks to everyone who helps when help is needed.
 '''
 
 import copy 
