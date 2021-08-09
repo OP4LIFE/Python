@@ -91,7 +91,7 @@ def generation():
         print(line)        
 
 # Interface.
-print('\nCONWAYS GAME OF LIFE\nSource: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life\n')
+print('\nCONWAYS GAME OF LIFE\nMore information: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life\n')
 print('Field: ')
 for line in field:
     print(line)
