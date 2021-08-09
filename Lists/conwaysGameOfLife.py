@@ -1,12 +1,29 @@
 
 
-# CONWAYS GAME OF LIFE
-# https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+'''
 
-import copy
+CONWAYS GAME OF LIFE
 
-# Do not change the symbols for live and dead squares as it will interfere with the code.
-# x and y-axis must be the same size otherwise the second condition on line 34 isn't correct.
+The game is a cellular automaton devised by the British matehmatician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
+
+Rules which shape the next generation:
+1. rule: If a live square has two or three live neighbours, it stays alive, else it dies.
+2. rule: If a dead square has exactly three neighbours, it becomes alive, else it stays dead.
+
+Source: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+'''
+
+'''
+
+NOTES FOR MODIFYING THE PROGRAM
+
+Do not change the symbols for live and dead squares as it will interfere with the code.
+The field should be a square (x and y-axis are the same length), otherwise the second condition on line 52 isn't correct.
+
+'''
+
+import copy 
 
 # Creating a field of squares where each one has its own coorinates and a state. States of the dead squares are represented with zeroes, meanwhile states of the live squares are represented with ones. 
 # Be aware that the square with coordinates (x, y) is obtained from the list with indexes field[y][x].
@@ -73,6 +90,7 @@ def generation():
         print(line)        
 
 # Interface.
+print('\nCONWAYS GAME OF LIFE\nSource: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life\n')
 print('Field: ')
 for line in field:
     print(line)
