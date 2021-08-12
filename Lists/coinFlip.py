@@ -20,4 +20,4 @@ for i in range(len(values) - 5):
 # Print the possibility 
 print('Coin flips:', numOfFlips)
 print('Six same values in row:', sixInRow)
-print('Possibility: %s%%' % ((numOfFlips / sixInRow) * 100))
+print('Possibility: %s%%' % ((sixInRow / numOfFlips) * 100))
