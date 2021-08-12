@@ -11,14 +11,15 @@ while name:
     
     # Ask for a name and print the date.
     name = input('Name: ')
-    for i in range(len(birthdays))
+    for i in range(len(birthdays)):
         if name in birthdays[i]:
-            print('Birthday: ' + birthdays[i + 1] + ')
+            print('Birthday: ' + birthdays[i][1] + '\n')
             break
   
         # Otherwise, ask to add a date.
         elif i == len(birthdays) - 1 and name:
             date = input('Add a date: ')
+            print()
             if date:
-                birthdays.append([name, date]
+                birthdays.append([name, date])
 
