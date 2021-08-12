@@ -1,4 +1,4 @@
-print('BIRTHDAYS\n')
+print('BIRTHDAYS Using Dictionaries\n')
 
 # Creating a dictionary where keys are names and values are dates.
 birthdays = {'Matej': '23. January 2004'}
