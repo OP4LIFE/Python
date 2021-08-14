@@ -11,6 +11,7 @@ def setdefault(key, value, dictionary):
 
 # Testing
 dictionary = {'key': 'value'}
-print(setdefault('key', 'value', dictionary)
+print('Printing \'value\':', setdefault('key', 'value', dictionary))
+print('Printing \'new value\':', setdefault('Key', 'new value', dictionary))
 
 
