@@ -2,7 +2,7 @@
 # The program simulates the dictionary setdefault() method using a normal function.
 
 # The function
-def getdefault(key, value, dictionary):
+def setdefault(key, value, dictionary):
     if key in dictionary:
         return dictionary[key]
     else:
@@ -10,4 +10,7 @@ def getdefault(key, value, dictionary):
         return dictionary[key]
 
 # Testing
-dictionary = {
+dictionary = {'key': 'value'}
+print(setdefault('key', 'value', dictionary)
+
+
