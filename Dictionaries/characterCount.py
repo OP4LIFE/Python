@@ -1,5 +1,5 @@
 
-# The following program asks for a strng, stores the occurrences of each character into a dictionary and prints the dictionary.
+# The following program counts the occurrences of characters in text entered.
 print('CHARACTER COUNTER')
 print('The counter is case-sensitive.')
 print('(i) Enter enter to exit.')
