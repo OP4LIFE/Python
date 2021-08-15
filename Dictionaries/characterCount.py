@@ -9,7 +9,7 @@ while string:
 	# Ask for a string.
 	string = input('\nEnter some text: ')
 	
-	# A dictionary for storing 	occurrences.
+	# A dictionary for storing occurrences.
 	occurrences = {}
 	
 	# A loop for storing occurances.
