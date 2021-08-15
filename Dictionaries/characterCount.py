@@ -1,5 +1,5 @@
 
-# The following program asks for a word or a sentance, stores the occurrences of each character into a dictionary and prints the dictionary.
+# The following program asks for a strng, stores the occurrences of each character into a dictionary and prints the dictionary.
 print('CHARACTER COUNTER')
 print('The counter is case-sensitive.')
 print('(i) Enter enter to exit.')
