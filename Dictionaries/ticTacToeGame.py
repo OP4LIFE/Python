@@ -10,6 +10,10 @@ board = {1: ' ', 2: ' ', 3: ' ',
 
 # Winning conditions
 def conditions():
+    combinations = [[1, 2, 3], [4, 5, 6], [7, 8, 9], # Horizontal
+                    [1, 2, 7], [4, 5, 8], [7, 6, 9], # Vertical
+                    [1 or 3 
+
     return \ # Horizontal        
         board[1] == board[2] == board[3] or \
         board[4] == board[5] == board[6] or \
