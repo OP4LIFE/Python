@@ -10,7 +10,7 @@ board = {1: ' ', 2: ' ', 3: ' ',
 
 # Winning conditions
 def conditions():
-    if: \ # Horizontal        
+    return \ # Horizontal        
         board[1] == board[2] == board[3] or \
         board[4] == board[5] == board[6] or \
         board[7] == board[8] == board[9] or \
@@ -21,8 +21,6 @@ def conditions():
           # Diagonal
         board[1] == board[5] == board[9] or \
         board[3] == board[5] == board[9]
-          # if-clause
-        return 1
 
 for i in range(8):
 
