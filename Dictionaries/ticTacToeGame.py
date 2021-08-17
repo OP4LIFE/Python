@@ -10,21 +10,12 @@ board = {1: ' ', 2: ' ', 3: ' ',
 
 # Winning conditions
 def conditions():
-    combinations = [[1, 2, 3], [4, 5, 6], [7, 8, 9], # Horizontal
-                    [1, 2, 7], [4, 5, 8], [7, 6, 9], # Vertical
-                    [1 or 3 
-
-    return \ # Horizontal        
-        board[1] == board[2] == board[3] or \
-        board[4] == board[5] == board[6] or \
-        board[7] == board[8] == board[9] or \
-          # Vertical
-        board[1] == board[4] == board[7] or \
-        board[2] == board[5] == board[6] or \
-        board[7] == board[8] == board[9] or \
-          # Diagonal
-        board[1] == board[5] == board[9] or \
-        board[3] == board[5] == board[9]
+    conditions = [[1, 2, 3], [4, 5, 6], [7, 8, 9], # Horizontal
+                  [1, 4, 7], [2, 5, 6], [3, 6, 9], # Vertical
+                  [1, 5, 9], [3, 5, 7]]            # Diagonal
+    for condition in conditions:
+        if board[condition[0]] == board[condition[1]] == board[condition[2]]:
+            return 1
 
 for i in range(8):
 
