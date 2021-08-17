@@ -32,7 +32,7 @@ for i in range(8):
     if conditions():
         print('Player X is the winner')
         break
-    elif i == 7:
+    if i == 7:
         print('It\'s a tie')
         break
     
