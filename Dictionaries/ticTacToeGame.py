@@ -40,9 +40,16 @@ while 1:
                 print()
         
         # Store the approproate symbol at the inputed number in the board dictionary.
+        number = 
+        while 1 <= number <= 9 and board[number] != 'X' or 'O':
         try:
-            board[int(input('\nPlayer ' + player + ': '))] = player
+        	number = int(input('\nPlayer ' + player + ': '))
         except:
+        	number = int(input('\nPlayer ' + player + ': '))
+ 
+        if 
+            board[int(number)] = player
+        else:
             board[int(input('\nPlayer ' + player + ': '))] = player
         
         #  Checking for three in row.  
