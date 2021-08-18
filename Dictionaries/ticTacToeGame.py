@@ -1,4 +1,4 @@
-from pprint import pformat
+import random
 
 # The code is for playing Tic-Tac-Toe
 print('TIC-TAC-TOE GAME \n')
@@ -28,7 +28,11 @@ while 'q' not in board.values():
     
         # Player X's turn
         board[int(input('Player X: '))] = 'X'
-        pformat(board)
+        # Printing the board.
+        for i in range(9):
+            print(list(board.values())[i])
+            if i == 2 or 5 or 8:
+                print()
         #  Checking for three in row.  
         if conditions():
             print('Player X is the winner')
@@ -40,8 +44,12 @@ while 'q' not in board.values():
         
         # Player O's turn
         board[int(input('Player O'))] = 'O'
-        pformat(board)
-        #Checking for three in row.
+        # Printing the board.
+        for i in range(9):
+            print(list(board.values())[i])
+            if i == 2 or 5 or 8:
+                print()
+        # Checking for three in row.
         if conditions():
             print('Player O is the winner')
             break
