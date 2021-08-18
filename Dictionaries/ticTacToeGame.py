@@ -29,7 +29,7 @@ while 1:
             if board[condition[0]] == board[condition[1]] == board[condition[2]] == ('X' or 'O'):
                 return True
  
-    # Game loop.
+    # Game loop, player X starts.
     player = 'X'
     for move in range(9):
        
