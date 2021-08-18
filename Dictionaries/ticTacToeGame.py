@@ -8,7 +8,7 @@ board = {}
 while 'q' not in board.values():
     # A dictionary for storing moves.
     board = {1: '_', 2: '_', 3: '_',
-             4: ' ', 5: ' ', 6: ' ',
+             4: '_', 5: '_', 6: '_',
              7: '_', 8: '_', 9: '_'}
     
     # Function for cheking winning conditions.
@@ -20,58 +20,34 @@ while 'q' not in board.values():
             if board[condition[0]] == board[condition[1]] == board[condition[2]] == ('X' or 'O'):
                 return 1
     
-    # Random player start
-    if random.randint(0, 1):
-    	player = 'X'
-    else:
-    	player = 'O'
-    
-    # Player's turn
-    def turn(player):
-        board[int(input('Player X: '))] = 'X'
-        
-        # Printing the board.
-        for i in range(9):
-            print(list(board.values())[i])
-            if i == 2 or 5 or 8:
-                print()
-        
-        #  Checking for three in row.  
-        if conditions():
-            print('Player X is the winner')
-            break
-    
     # A loop for maximum of 9 moves for both players.
     # The starting player has 5 moves while the other has 4.
+    player = 'X'
     for move in range(9):
-    
-        # Player X's turn
-        board[int(input('Player X: '))] = 'X'
+        
+        # Move stored in board dictipnary.
+        board[int(input('Player ' + player + ': '))] = player
+        
         # Printing the board.
-        for i in range(9):
-            print(list(board.values())[i])
-            if i == 2 or 5 or 8:
+        for key in range(1, 10):
+            print(board[key], end = '')
+            if key / 3 == int(key / 3):
                 print()
+        
         #  Checking for three in row.  
         if conditions():
-            print('Player X is the winner')
-            break
-        # Last move.
-        if i == 8:
-            print('It\'s a tie')
+            print('Player ' + player + ' is the winner')
             break
         
-        # Player O's turn
-        board[int(input('Player O'))] = 'O'
-        # Printing the board.
-        for i in range(9):
-            print(list(board.values())[i])
-            if i == 2 or 5 or 8:
-                print()
-        # Checking for three in row.
-        if conditions():
-            print('Player O is the winner')
-            break
-    
+        # Change players at the end of the move.
+        if player == 'X':
+        	player = 'O'
+        else:
+        	player = 'X'     	
        
+       # Last move.
+        if move == 8:
+            print('It\'s a tie')
+            break
+        	   
     
