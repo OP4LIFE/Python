@@ -2,13 +2,14 @@ import random
 
 # The code is for playing Tic-Tac-Toe
 print('TIC-TAC-TOE GAME \n')
-print('(i) Enter 'q' to exit.')
+print('(i) Enter \'q\' to exit.')
 
+board = {}
 while 'q' not in board.values():
     # A dictionary for storing moves.
-    board = {1: ' ', 2: ' ', 3: ' ',
+    board = {1: '_', 2: '_', 3: '_',
              4: ' ', 5: ' ', 6: ' ',
-             7: ' ', 8: ' ', 9: ' '}
+             7: '_', 8: '_', 9: '_'}
     
     # Function for cheking winning conditions.
     def conditions():
@@ -29,9 +30,9 @@ while 'q' not in board.values():
         # Player X's turn
         board[int(input('Player X: '))] = 'X'
         # Printing the board.
-        for i in range(9):
-            print(list(board.values())[i])
-            if i == 2 or 5 or 8:
+        for ii in range(9):
+            print(list(board.values())[ii])
+            if ii == 2 or 5 or 8:
                 print()
         #  Checking for three in row.  
         if conditions():
@@ -45,9 +46,9 @@ while 'q' not in board.values():
         # Player O's turn
         board[int(input('Player O'))] = 'O'
         # Printing the board.
-        for i in range(9):
-            print(list(board.values())[i])
-            if i == 2 or 5 or 8:
+        for ii in range(9):
+            print(list(board.values())[ii])
+            if ii == 2 or 5 or 8:
                 print()
         # Checking for three in row.
         if conditions():
