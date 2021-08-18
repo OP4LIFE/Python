@@ -20,19 +20,37 @@ while 'q' not in board.values():
             if board[condition[0]] == board[condition[1]] == board[condition[2]] == ('X' or 'O'):
                 return 1
     
-    # Random player start.
+    # Random player start
+    if random.randint(0, 1):
+    	player = 'X'
+    else:
+    	player = 'O'
     
+    # Player's turn
+    def turn(player):
+        board[int(input('Player X: '))] = 'X'
+        
+        # Printing the board.
+        for i in range(9):
+            print(list(board.values())[i])
+            if i == 2 or 5 or 8:
+                print()
+        
+        #  Checking for three in row.  
+        if conditions():
+            print('Player X is the winner')
+            break
     
     # A loop for maximum of 9 moves for both players.
     # The starting player has 5 moves while the other has 4.
-    for i in range(9):
+    for move in range(9):
     
         # Player X's turn
         board[int(input('Player X: '))] = 'X'
         # Printing the board.
-        for ii in range(9):
-            print(list(board.values())[ii])
-            if ii == 2 or 5 or 8:
+        for i in range(9):
+            print(list(board.values())[i])
+            if i == 2 or 5 or 8:
                 print()
         #  Checking for three in row.  
         if conditions():
@@ -46,9 +64,9 @@ while 'q' not in board.values():
         # Player O's turn
         board[int(input('Player O'))] = 'O'
         # Printing the board.
-        for ii in range(9):
-            print(list(board.values())[ii])
-            if ii == 2 or 5 or 8:
+        for i in range(9):
+            print(list(board.values())[i])
+            if i == 2 or 5 or 8:
                 print()
         # Checking for three in row.
         if conditions():
