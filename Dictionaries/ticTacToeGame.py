@@ -14,9 +14,9 @@ board = {}
 
 # Main loop.
 while 1:
-    board = {1: 1, 2: 2, 3: 3,
-             4: 4, 5: 5, 6: 6,
-             7: 7, 8: 8, 9: 9}
+    board = {'1': 1, '2': 2, '3': 3,
+             '4': 4, '5': 5, '6': 6,
+             '7': 7, '8': 8, '9': 9}
     
     # Function for cheking winning conditions.
     def conditions():
@@ -26,7 +26,7 @@ while 1:
         for condition in conditions:
             
             # If three in a row, announce it!
-            if board[condition[0]] == board[condition[1]] == board[condition[2]] == ('X' or 'O'):
+            if board[str(condition[0])] == board[str(condition[1])] == board[str(condition[2])] == ('X' or 'O'):
                 return True
  
     # Game loop, player X starts.
@@ -44,7 +44,7 @@ while 1:
             input = input('\nPlayer ' + player + ': ')
             if input == 'q':
                 sys.exit()
-            elif input 
+            elif input
 
 number = 
         while 1 <= number <= 9 and board[number] != 'X' or 'O':
