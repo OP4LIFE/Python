@@ -40,7 +40,13 @@ while 1:
                 print()
         
         # Store the approproate symbol at the inputed number in the board dictionary.
-        number = 
+        while 1:
+            input = input('\nPlayer ' + player + ': ')
+            if input == 'q':
+                sys.exit()
+            elif input 
+
+number = 
         while 1 <= number <= 9 and board[number] != 'X' or 'O':
         try:
         	number = int(input('\nPlayer ' + player + ': '))
