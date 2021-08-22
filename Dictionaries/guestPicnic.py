@@ -10,7 +10,7 @@ itemsBrought = {}
 for allItems in allGuests.values():
   
   # Iterate over all individual items and quantities in the ongoing person's dictionary.
-  for item, quantity in allItems.item():
+  for item, quantity in allItems.items():
   
     # If the item already exists in the "summing" dictionary, just add its quantity to the existing one,
     if item in itemsBrought.keys():
