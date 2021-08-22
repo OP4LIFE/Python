@@ -25,9 +25,23 @@ print(allGuests.values()[2])
 # 1.) Iterate over the keys in nested dictionaries.
 # 1.5.) Check, if the considered key already exists in the separate dictionary.
 # 1.8.) If the key does exist, add the considered key's value to the existing one,
-#       else 
-# 2.) For each key-value pair, store it in the separate dictionary.
+#       else insert the key-value pair to the separate dictionary.
+# 2.) Use tuple unpacking in a for loop to neatly print the separate dictionary.
 # 3.) 
+
+# Creating a separate dictionary for summing up values of the same key.
+itemsBrought = {}
+
+# The following for loops iterate over all items brought (, over all keys in nested dictionary).
+for allItems in allGuests.values():
+  for item, quantity in allItems.item():
+    itemsBrought.setdefault(item, quantity)
+    if item in itemsBrought.keys():
+      itemsBrought[item] += quantity
+    else:
+      
+      
+    
 
 
 print('Number of things being brought:')
