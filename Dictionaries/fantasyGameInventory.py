@@ -1,19 +1,15 @@
 
 inventory = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
-
-# The function sorts an inventory by keys.
-
-
+secondInventory = {'rope': 3, 'torch': 2, 'gold coin': 23}
+   
 # The function displays any inventory.
 def displayInventory(inventory):
-    print('Inventory:')
-    
-    # Sorting the inventory alphabetically.
-    inventory.sort()
+    print('\nInventory:')
 
     allItemsQuantity = 0
     for item, quantity in inventory.items():
-        # Printing items and their quantity.
+        
+        # Printing quantities and their associated items.
         print(quantity, item)
         
         # Counting a total number of items.
@@ -23,3 +19,6 @@ def displayInventory(inventory):
 
 # Testing displayInventory().
 displayInventory(inventory)
+displayInventory(secondInventory)
+
+
