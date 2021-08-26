@@ -15,6 +15,7 @@ def displayInventory(inventory):
         allItemsQuantity += quantity
 
     print('Total number of items:', allItemsQuantity)
+   
 # Testing displayInventory().
 displayInventory(inventory)
 displayInventory(secondInventory)
