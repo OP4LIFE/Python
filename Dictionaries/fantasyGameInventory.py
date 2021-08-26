@@ -5,6 +5,7 @@ secondInventory = {'rope': 3, 'torch': 2, 'gold coin': 23}
 # The function displays any inventory.
 def displayInventory(inventory):
     print('\nInventory:')
+      
     allItemsQuantity = 0
     for item, quantity in inventory.items():
         
