@@ -1,9 +1,9 @@
 
 inventory = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
-secondInventory = {'rope': 3, 'torch': 2, 'gold coin': 23}
+dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
    
 # The function displays any inventory.
-def displayInventory(inventory):
+def display(inventory):
     print('\nInventory:')
       
     allItemsQuantity = 0
@@ -16,9 +16,21 @@ def displayInventory(inventory):
         allItemsQuantity += quantity
 
     print('Total number of items:', allItemsQuantity)
-   
-# Testing displayInventory().
-displayInventory(inventory)
-displayInventory(secondInventory)
+
+# The function adds items to the inventory.
+def add(inventory, items):
+    for item in items:
+        inventory.setdefault(item, 0)
+        inventory[item] += 1
+    
+    # Clear the items list.
+    items = []
+
+
+# Testing.
+display(inventory)
+print('\nAdding the loot to inventory...')
+add(inventory, dragonLoot)
+display(inventory)
 
 
