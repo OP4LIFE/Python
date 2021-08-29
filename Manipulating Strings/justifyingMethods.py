@@ -25,7 +25,7 @@ widths = []
 strings = ['', ' ', 'H', 'Hi', 'Hi!', 'Four']
 fillchar = '*'
 
-results = [[r'ljust()'], [r'rjust()'], [r'center()']]
+results = [['ljust()'], ['rjust()'], ['center()']]
 for string in strings:
     
     # Creating a list of important widths.
