@@ -8,7 +8,6 @@ def ljust(width, string, fillchar = ' '):
     padding = (width - len(string)) * fillchar
     return string + padding
 
-# center() Method.
 def center(width, string, fillchar = ' '):
     if width < len(string):
         return string
