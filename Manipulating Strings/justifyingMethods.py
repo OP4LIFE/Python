@@ -1,17 +1,12 @@
 
 # The following program simulates string methods for justifying text.
-
-# rjust() Method.
 def rjust(width, string, fillchar = ' '):
     padding = (width - len(string)) * fillchar
     return padding + string
 
-print('\nTesting rjust():')
-print(rjust(6, 'Hi', '*'), 'Hi'.rjust(6, '*'))
-print(rjust(5, 'Hi', '*'), 'Hi'.rjust(5, '*'))
-print(rjust(2, 'Hi', '*'), 'Hi'.rjust(2, '*'))
-print(rjust(1, 'Hi', '*'), 'Hi'.rjust(1, '*'))
-print(rjust(-1, 'Hi', '*'), 'Hi'.rjust(-1, '*'))
+def ljust(width, string, fillchar = ' '):
+    padding = (width - len(string)) * fillchar
+    return string + padding
 
 # center() Method.
 def center(width, string, fillchar = ' '):
@@ -22,15 +17,36 @@ def center(width, string, fillchar = ' '):
     padding = ((width - len(string)) // 2) * fillchar
     reminder = ((width - len(string)) % 2) * fillchar
 
-    return (reminder + padding) + string + padding
+    return padding + string + (reminder + padding)
 
-# rleft, testing loop      
+# Testing.
+# Lists of testing arguments.
+widths = []
+strings = ['', ' ', 'H', 'Hi', 'Hi!', 'Four']
+fillchars = [' ', '*', '1']
 
-print('\nTesting center():')
-print(center(6, 'Hi', '*'), 'Hi'.center(6, '*'))
-print(center(5, 'Hi', '*'), 'Hi'.center(5, '*'))
-print(center(2, 'Hi', '*'), 'Hi'.center(2, '*'))
-print(center(1, 'Hi', '*'), 'Hi'.center(1, '*'))
-print(center(-1, 'Hi', '*'), 'Hi'.center(-1, '*')) 
+results = [[r'ljust()'], [r'rjust()'], [r'center()']]
+for string in strings:
+    
+    # Creating a list of important widths.
+    widths = []
+    widths += [len(string) + 2, len(string) + 1, len(string), len(string) - 1, len(string) - 2, 0, -1, -2]
+
+    for fillchar in fillchars:            
+        for width in widths:
+            results[0] += [ljust(width, string, fillchar) == string.ljust(width, fillchar)]
+            results[1] += [rjust(width, string, fillchar) == string.rjust(width, fillchar)]
+            results[2] += [center(width, string, fillchar) == string.center(width, fillchar)]
+
+            # See where a method is malfunctioning.
+#            if center(width, string, fillchar) != string.center(width, fillchar):
+#                print(f'width {width}, string {string}, fillchar {fillchar}')
+#                print(center(width, string, fillchar), string.center(width, fillchar), '', sep = '\n')
+
+for method in [0, 1, 2]:
+    if False in results[method]:
+        print(results[method][0], 'method is malfunctioning.')
+    else:
+        print(results[method][0], 'method is confirmed.')
 
 
