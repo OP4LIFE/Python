@@ -1,7 +1,8 @@
-
 #------------ README ----------------------------
 '''
-Install required libraries from the Command prompt or Terminal.
+The program draws a map from given coordinates.
+
+Install required libraries:
 Windows: py -m pip install openpyxl matplotlib numpy
 Unix/macOS: python -m pip install openpyxl matplotlib numpy
 '''
@@ -34,7 +35,6 @@ for i in range(1, sheet1.max_row + 1):
     xpoints.append(x)
     ypoints.append(y)
 
-
 #------------ WRITE ----------------------------
 # Create Sheet2.
 if 'Sheet2' not in wb.sheetnames:
@@ -59,14 +59,21 @@ fig, ax = plt.subplots()
 
 ax.set_aspect('equal')
 
-ax.spines['right'].set_visible(True)
-ax.spines['top'].set_visible(True)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 
 plt.xticks([])
 plt.yticks([])
 
-plt.xlim(0, 10)
-plt.ylim(0, 10)
+max_value = max([max(xpoints), max(ypoints)])
+plt.xlim(0, max_value + 1)
+plt.ylim(0, max_value + 1)
+
+# Label each point.
+for i in range(1, sheet1.max_row):
+    plt.text(xpoints[i - 1], ypoints[i - 1] + 0.2, str(i))
 
 # Draw and save the map.
 plt.plot(xpoints, ypoints, '.-')
