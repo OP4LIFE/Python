@@ -7,6 +7,8 @@ Windows: py -m pip install openpyxl matplotlib numpy
 Unix/macOS: python -m pip install openpyxl matplotlib numpy
 '''
 
+# Add functions, i confition, checker
+
 import openpyxl
 import matplotlib.pyplot as plt
 import numpy as np
