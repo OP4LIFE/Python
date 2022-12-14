@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load a file.
-file = 'koordinati.xlsx'
+file = 'koordinati1.xlsx'
 wb = openpyxl.load_workbook(file)
 
 
